@@ -1,0 +1,37 @@
+<table>
+  <caption>
+    <h1>
+      Student List
+    </h1>
+  </caption>
+
+  <thead>
+    <tr>
+      <th>Roll No</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>TotalMarks</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let s of students; let i = index">
+      <td>{{ s.rollNo }}</td>
+      <td>{{ s.name }}</td>
+      <td>{{ s.phone }}</td>
+      <td>{{ s.totalMarks }}</td>
+      <td>
+        <button [routerLink]="['/update',s.rollNo]">Edit</button>
+        <button (click)="deleteStudent(s.rollNo)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div style="margin: 10px;">
+  <h2>
+    {{showValue()}}
+  </h2>
+</div>
+
