@@ -22,7 +22,7 @@
       <td>{{ s.totalMarks }}</td>
       <td>
         <button [routerLink]="['/update',s.rollNo]">Edit</button>
-        <button (click)="deleteStudent(s.rollNo)">Delete</button>
+        <button (click)="deleteStudent(s.rollNo)" style="background-color: red;">Delete</button>
       </td>
     </tr>
   </tbody>
